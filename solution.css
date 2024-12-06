@@ -1,0 +1,16 @@
+/* Correcting the CSS calc() issue */
+
+/* Instead of: */
+/* width: calc(100% - 20%); */ /* Incorrect unit usage */
+/* Use: */
+width: calc(100% - 20px); /* Correct - substracting pixels from percentage */
+
+/* Or, if you need to subtract a percentage from a percentage:  */
+/* width: calc(100% - (20%)); */
+/* Always ensure unit consistency within the calc() function to get expected results */
+
+/* Another example demonstrating order of operations */
+/* Incorrect order */
+/* height: calc(100px + 50% * 2); */ 
+/* Correct order */
+height: calc(100px + (50% * 2)); /* Parentheses ensure correct calculation */
